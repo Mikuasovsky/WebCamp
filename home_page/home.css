@@ -217,7 +217,7 @@
 .main_content h2{
     font-size: 3rem;
     background-color: #409fff ;
-    background-image: linear-gradient(to top, #ff76f4 0%, #409fff 100%);
+    background-image: linear-gradient(to top, #409fff 0%, #ff76f4 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -323,7 +323,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 110vh;
     background-image: url('/assets/WEBdesign_idea.png')
 }
 
@@ -349,7 +349,7 @@
 .learn_card{
     margin:1rem;
     height: 525px;
-    width: 400px;
+    width: 300px;
     border-radius: 4px;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/learn.jpg');
     background-size: cover;
@@ -364,14 +364,14 @@
     color:#fff;
     margin:1rem;
     height: 525px;
-    width: 400px;
+    width: 300px;
     border-radius: 4px;
 }
 
 .learn_card3{
     margin:1rem;
     height: 525px;
-    width: 400px;
+    width: 300px;
     border-radius: 4px;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/hello.jpg');
     background-size: cover;
@@ -382,7 +382,7 @@
 .learn_card4{
     margin:1rem;
     height: 525px;
-    width: 400px;
+    width: 300px;
     border-radius: 4px;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/account.png');
     background-size: cover;
