@@ -5,6 +5,10 @@
     font-family: 'Kode Mono';
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 #logo{
     width: 75%;
 }
@@ -185,32 +189,243 @@
 }
 }
 
+.learn-container{
+    background: url('/assets/WEBdesign_idea.png');
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 999;
+}
 
+.learn-container h1{
+    background-image: linear-gradient(to right, #000000 0%, #2339b3 50%, #e029d7 100%);
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-top: 5rem;
+}
 
+.learn-btn{
+    color: #fff;
+    background-image: linear-gradient(to top, #ff76f4 0%, #ad2ca7 100%);
+    padding: 30px 48px;
+    border-radius: 10px;
+    position: absolute;
+    top: 550px;
+    left: 30px;
+    font-size:1rem;
+    cursor: pointer;
+    margin-left: 52rem;
+    outline: none;
+    border: none;
+    transition: all 0.55;
+    overflow: hidden; 
+    z-index: 1;
+}
 
+.learn-btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #a1cdf8;
+    transition: all 0.55s ease;
+    border-radius: 10px;
+    z-index: -1;
+}
 
+.learn-btn:hover{
+    color:#fff;
+}
 
+.learn-btn:hover:after{
+    width: 100%;
+}
 
+.sep{
+    background: url('/assets/design\ desfocado.png');
+}
 
+.sep2{
+    background: url('/assets/design\ desfocado.png');
+    height: 200px;
+}
 
+.sep2 h2{
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+}
 
+.html-container{
+    width: 100%;
+    padding: 10px 20px;
+    background-color:#2b2929 ;
+}
 
+.html{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
+.html-content{
+    flex: 1;
+}
 
+.html-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-align: center;
+}
 
+.html-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-top: 30px;
+    text-align: center;
+}
 
+.html-content h2::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #2339b3;
+    margin-top: 10px;
+}
 
+.html-video {
+    flex: 2;
+    overflow: hidden;
+}
 
+.html-video iframe{
+    max-width: 200%;
+    display: block;
+    transition: 0.5s ease;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    margin-left: 300px;
+}
 
+.css-container{
+    width: 100%;
+    padding: 10px 20px;
+    background-color:#2b2929 ;
+}
 
+.css{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
+.css-content{
+    flex: 1;
+}
 
+.css-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-align: center;
+}
 
+.css-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-top: 30px;
+    text-align: center;
+}
 
+.css-content h2::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #2339b3;
+    margin-top: 10px;
+}
 
+.css-video {
+    flex: 2;
+    overflow: hidden;
+}
 
+.css-video iframe{
+    max-width: 200%;
+    display: block;
+    transition: 0.5s ease;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    margin-left: 380px;
+}
 
+.links{
+    background-image: linear-gradient(to bottom, #c239bb 0%, #000000 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
 
+@media screen and (max-width: 960px){
+    .learn-btn{
+        padding: 18px 40px;
+        margin: 2rem 0;
+        margin-left: 26rem;
+    }
+
+    .html-video iframe{
+        width: 50%;
+        margin: 2rem 0;
+        margin-left: 9rem;
+
+    }
+
+    .css-video iframe{
+        width: 50%;
+        margin: 2rem 0;
+        margin-left: 11rem;
+    }
+
+    .html-content p{
+        text-align: center;
+    }
+
+    .css-content p{
+        text-align: center;
+    }
+}
 
 .footer_container{
     background-color: #2b2929;

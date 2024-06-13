@@ -93,7 +93,6 @@
 .navbar_links:hover{
     color: #a1cdf8;
     transition: all 0.3s ease;
-
 }
 
 @media screen and (max-width: 960px) {
@@ -395,6 +394,8 @@
     position: absolute;
     top:350px;
     left: 30px;
+    text-align: center;
+    margin-right: 1.5rem;
 }
 
 .learn_card button{
@@ -409,6 +410,7 @@
     left: 30px;
     font-size:1rem;
     cursor: pointer;
+    margin-left: 4rem;
 }
 
 .learn_card2 button{
@@ -423,6 +425,7 @@
     left: 30px;
     font-size:1rem;
     cursor: pointer;
+    margin-left: 4.2rem;
 }
 
 .learn_card3 button{
@@ -437,6 +440,7 @@
     left: 30px;
     font-size:1rem;
     cursor: pointer;
+    margin-left: 3rem;
 }
 
 .learn_card4 button{
@@ -451,6 +455,7 @@
     left: 30px;
     font-size:1rem;
     cursor: pointer;
+    margin-left: 3rem;
 }
 
 .learn_card:hover{
@@ -485,6 +490,46 @@
         font-size: 2rem;
         margin-top: 12rem;
     }
+
+    .navbar_links{
+        padding: 12px 36px;
+    }
+
+    .learn_card h2{
+       text-align: center;
+       margin-right: 1rem;
+    }
+
+    .learn_card button{
+        margin-left: 2.8rem;
+    }
+
+    .learn_card2 h2{
+        text-align: center;
+        margin-right: 1rem;
+     }
+ 
+     .learn_card2 button{
+         margin-left: 2.8rem;
+     }
+
+     .learn_card3 h2{
+        text-align: center;
+        margin-right: 1rem;
+     }
+ 
+     .learn_card3 button{
+         margin-left: 1.8rem;
+     }
+
+     .learn_card4 h2{
+        text-align: center;
+        margin-right: 1rem;
+     }
+ 
+     .learn_card4 button{
+         margin-left: 2rem;
+     }
 }
 
 @media screen and (max-width: 480px){

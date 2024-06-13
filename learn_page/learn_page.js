@@ -7,5 +7,3 @@ menu.addEventListener('click', function () {
 });
 
 
-
-

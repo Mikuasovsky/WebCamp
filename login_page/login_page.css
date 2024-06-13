@@ -211,13 +211,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transform: scale(0);
-    transition: transform .5s ease,height .2s ease;
-}
-
-.login-box.active-popup{
-    transform: scale(1);
-
 }
 
 
@@ -275,7 +268,6 @@
 .input-box input:focus~label,
 .input-box input:valid~label{
     top: -5px;
-
 }
 
 
@@ -380,13 +372,6 @@
     transition: none;
     transform: translateX(-400px);
 }
-
-
-
-
-
-
-
 
 .footer_container{
     background-color: #2b2929;
