@@ -62,6 +62,17 @@
     height: 100%;
 }
 
+
+.navbar_links2{
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
 .navbar_btn{
     display: flex;
     justify-content: center;
@@ -92,6 +103,13 @@
 }
 
 .navbar_links:hover{
+    color: #a1cdf8;
+    transition: all 0.3s ease;
+
+}
+
+
+.navbar_links2:hover{
     color: #a1cdf8;
     transition: all 0.3s ease;
 
