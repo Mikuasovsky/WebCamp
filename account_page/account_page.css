@@ -370,7 +370,7 @@
     border: 1.5px solid #409fff;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
     .profile-container{
         flex-direction: column;
     }

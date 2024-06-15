@@ -344,6 +344,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .learn_card{
@@ -355,6 +356,8 @@
     background-size: cover;
     position: relative;
     color:#fff;
+    margin-top: 3rem;
+
 }
 
 .learn_card2{
@@ -388,6 +391,10 @@
     background-size: cover;
     position: relative;
     color:#fff;
+}
+
+.learn h1{
+    margin-top: 8rem;
 }
 
 .learn h2{
