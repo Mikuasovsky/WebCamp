@@ -26,9 +26,8 @@ loginLink.addEventListener('click',  () => {
 });
 
 if(window.localStorage){
-  //console.log("Supported...")
-  localStorage.setItem("email", "admin@example.com");
-  localStorage.setItem("pass", "admin123");
+  localStorage.setItem("email", "admin@web.camp");
+  localStorage.setItem("pass", "admin");
   
   let email = localStorage.getItem("email");
   let pass = localStorage.getItem("pass");
@@ -36,10 +35,10 @@ if(window.localStorage){
   let message = localStorage.getItem(".message");
 
   submit.addEventListener('click', () => {
-    if(email == txtemail.value && pass == txtpass.value){
-      message.innerHTML ="Login Successfull!";
+    if(email === txtemail.value && pass === txtpass.value){
+      window.location.href = "../account_page/account_page.html";
     }else{
-      message.innerHTML ="Username or Password Invalid!";
+      alert("Invalid Email or Password");
     }
   })
 
