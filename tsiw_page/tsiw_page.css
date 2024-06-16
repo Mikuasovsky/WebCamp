@@ -185,27 +185,460 @@
 }
 }
 
+.tsiw-container{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #409fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.blur{
+    background: url('/assets/1345335.png');
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tsiw-container h1{
+    background-color: #fff;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-top: 5rem;
+}
 
 
+body, html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
 
+.sep{
+    background-color: #2b2929;
+}
 
+.sep3{
+    background-color: #2b2929;
+    padding-bottom: 80px;
+}
 
+.sep4{
+    background-color: #2b2929;
+    padding-bottom: 80px;
+}
 
+.sep5{
+    background-color: #2b2929;
+}
 
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/WEBdesign_idea.png')
+}
 
+.stats_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
 
+.stats_card{
+    margin:1rem;
+    height: 525px;
+    width: 300px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/html.jpg');
+    background-size: cover;
+    position: relative;
+    color:#fff;
+    margin-top: 7rem;
 
+}
 
+.stats_card2{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/1345335.png');
+    background-size: cover;
+    position: relative;
+    color:#fff;
+    margin:1rem;
+    height: 525px;
+    width: 300px;
+    border-radius: 4px;
+}
 
+.stats_card3{
+    margin:1rem;
+    height: 525px;
+    width: 300px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/saidas.jpg');
+    background-size: cover;
+    position: relative;
+    color:#fff;
+}
 
+.stats_card4{
+    margin:1rem;
+    height: 525px;
+    width: 300px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/assets/plug-in.jpg');
+    background-size: cover;
+    position: relative;
+    color:#fff;
+}
 
+.stats h2{
+    position: absolute;
+    top:350px;
+    left: 30px;
+    text-align: center;
+    margin-right: rem;
+}
 
+.stats_card h2{
+    margin-left: 30px;
+}
 
+.stats_card4 h2{
+    margin-left: 70px;
+}
 
+.stats_card button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #409fff;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size:1rem;
+    cursor: pointer;
+    margin-left: 5.3rem;
+}
 
+.stats_card2 button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #409fff;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size:1rem;
+    cursor: pointer;
+    margin-left: 5rem;
+}
 
+.stats_card3 button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #409fff;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size:1rem;
+    cursor: pointer;
+    margin-left: 5.6rem;
+}
 
+.stats_card4 button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #409fff;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size:1rem;
+    cursor: pointer;
+    margin-left: 5.6rem;
+}
 
+.stats_card:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.stats_card2:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.stats_card3:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.stats_card4:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.esmad{
+    color: #fff;
+    padding:20px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    background: #2b2929;
+    font-size:1rem;
+    cursor: pointer;
+    margin-left: 5.6rem;
+}
+
+.esmad:hover{
+    color: #ff5af1;
+}
+
+.stats_card a{
+    transition: 1s all linear;
+    -webkit-transition: 1s all linear;
+    -moz-transition: 1s all linear;
+    -ms-transition: 1s all linear;
+    -o-transition: 1s all linear;
+}
+
+.sep h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 5rem;
+}
+
+.sep h1::after{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e029d7;
+    margin-top: 85px;
+}
+
+.p1{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #409fff;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 12rem;
+    margin-left: 58rem;
+}
+
+.p2{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #409fff;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 6rem;
+    margin-left: 58rem;
+}
+
+.p3{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #409fff;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10rem;
+    margin-left: 58rem;
+}
+
+.sep2{
+    background: url('/assets/design\ desfocado.png');
+}
+
+.sep3 h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 5rem;
+}
+
+.sep3 h1::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e029d7;
+    margin-top: 85px;
+}
+
+.sep3 h2{
+    color: #fff;
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.sep3 h2::after{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e029d7;
+    margin-top: px;
+}
+
+.primeiro img{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    border-radius: 10px;
+}
+
+.ano2 h2{
+    margin-left: 53rem;
+}
+
+.ano2 img{
+    margin-left: 42rem;
+    border-radius: 10px;
+}
+
+.ano3 h2{
+    margin-left: 102rem;
+}
+
+.ano3 img{
+    margin-left: 80rem;
+    border-radius: 10px;
+}
+
+.sep4 h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 5rem;
+}
+
+.sep4 h1::after{
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e029d7;
+    margin-top: 85px;
+}
+
+.cds{
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 14px;
+    font-weight: bold;
+    border: none;
+}
+
+.cds:hover{
+    cursor: pointer;
+    background-color: #a1cdf8;
+}
+
+.dsm{
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 14px;
+    font-weight: bold;
+    border: none;
+}
+
+.dsm:hover{
+    cursor: pointer;
+    background-color: #a1cdf8;
+}
+
+.dpc{
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 14px;
+    font-weight: bold;
+    border: none;
+}
+
+.dpc:hover{
+    cursor: pointer;
+    background-color: #a1cdf8;
+}
+
+.sep5 h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 5rem;
+}
+
+.sep5 h1::after{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e029d7;
+    margin-top: 85px;
+}
 
 
 

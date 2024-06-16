@@ -185,6 +185,10 @@
 }
 }
 
+#image-upload{
+    margin-top: 20px;
+}
+
 .profile-container{
     background: url('/assets/WEBdesign_idea.png');
     display: flex;
@@ -243,6 +247,15 @@
     border-radius: 10px;
 }
 
+.logout-link{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
 #menu-icon{
     margin-right: 10px;
     color: #fff;
@@ -253,12 +266,27 @@
     background-color: #409fff;
 }
 
+.logout-link:first-child{
+    color: #fff;
+    background-color: #409fff;
+}
+
 .menu-link:hover{
     background-color: #a1cdf8;
     color: #2b2929;
 }
 
+.logout-link:hover{
+    background-color: #a1cdf8;
+    color: #2b2929;
+}
+
 .menu-link:first-child:hover{
+    background-color: #409fff;
+    color: #fff;
+}
+
+.logout-link:first-child:hover{
     background-color: #409fff;
     color: #fff;
 }
@@ -369,6 +397,21 @@
     outline: none;
     border: 1.5px solid #409fff;
 }
+
+#btn-upload, #image-upload {
+    background-color: #409fff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  /* Style hover and active states for better user experience */
+  #btn-upload:hover, #image-upload:hover,
+  #btn-upload:active, #image-upload:active {
+    background-color: #a1cdf8;
+  }
 
 @media screen and (max-width: 960px){
     .profile-container{

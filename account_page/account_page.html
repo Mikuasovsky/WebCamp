@@ -9,8 +9,6 @@
     <link rel="icon" href="/assets/logo_png.png" type="image" id="logo">
     <script src="https://kit.fontawesome.com/dada07158c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMWj44oi9sI5ALpBi4Su/0mpzn0w0r7rc7Ftw3Q" crossorigin="anonymous">
-
-
 </head>
 <body>
     <nav class="navbar">
@@ -47,17 +45,19 @@
     <div class="profile-container">
         <div class="profile">
             <div class="profile-header">
-                <img src="/assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="profile" class="profile-img"/>
+                <img src="/assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="profile" class="profile-img" id="profile-image" />
                 <div class="profile-text-container">
-                    <h1 class="profile-title">Your Username</h1>
-                    <p class="profile-email">Your Email</p>
+                  <h1 class="profile-title" id="profile-username"></h1>
+                  <p class="profile-email" id="profile-email"></p>
+                  <input type="file" id="image-upload" >
+                  <button id="btn-upload">Upload Image</button>
                 </div>
-            </div>
+              </div>
             <div class="menu">
                 <a href="#" class="menu-link"><i class="fa-solid fa-user" id="menu-icon"></i>Account</a>
                 <a href="#" class="menu-link"><i class="fa-solid fa-bell" id="menu-icon"></i>Notification</a>
                 <a href="#" class="menu-link"><i class="fa-solid fa-gear" id="menu-icon"></i>Settings</a>
-                <a href="/login_page/login_page.html" class="menu-link"><i class="fa-solid fa-right-from-bracket" id="menu-icon"></i>Logout</a>
+                <a href="#" id="logout-link" class="menu-link"><i class="fa-solid fa-right-from-bracket" id="menu-icon"></i>Logout</a>
             </div>
         </div>
         <form class="account">

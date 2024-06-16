@@ -9,7 +9,8 @@
     <link rel="icon" href="/assets/logo_png.png" type="image" id="logo">
     <script src="https://kit.fontawesome.com/dada07158c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMWj44oi9sI5ALpBi4Su/0mpzn0w0r7rc7Ftw3Q" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -64,7 +65,6 @@
                     <a href="#">Forgot Password?</a>
                 </div>
                     <button class="btn-sub">Login</button>
-                    <p class="message"></p>
                 <div class="login-register">
                     <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
                 </div>
@@ -76,23 +76,23 @@
             <form action="#">
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-user"></i></span>
-                    <input type="text" required>
+                    <input class="user"  type="text" required>
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" required>
+                    <input class="email" type="email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" required>
+                    <input class="pass" type="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox" required>I agree to the terms & conditions</label>  
                 </div>
-                <button type="submit" class="btn-sub">Register</button>
+                <button  type="button" class="btn-sub1">Register</button>
                 <div class="login-register">
                     <p>Already have an account?<a href="#" class="login-link">Login</a></p>
                 </div>

@@ -326,6 +326,19 @@
     font-weight: 500;
 }
 
+.btn-sub1{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
 .login-register{
     font-size: .9em;
     color: #162938;
