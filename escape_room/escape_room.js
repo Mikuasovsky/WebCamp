@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Timer variables
     const timerElement = document.getElementById('timer');
-    let timeRemaining = 5 * 60; // 5-minute timer in seconds
+    let timeRemaining = 30; // 5-minute timer in seconds
     let timerInterval;
 
 
