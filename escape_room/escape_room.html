@@ -41,26 +41,130 @@
         </div>
     </nav>
 
-    <img src="/assets/Final_escaperoom.jpg" usemap="#workmap" alt="escaperoom">
+    <div class="narrativa">
+        <h1>WebCamp Job Interview</h1>
+        <p>You are a student in TSIW and you are trying to get a job at the "WebCamp & CO".</p>
+        <p>So you booked a meeting with the bosses of the company, Miguel and Viana.</p>
+        <p>After the meeting the bosses told you that if you wanted to get a job at this facility you would have to unlock all of the computers in the room and go trough the exit door</p>
+        <p>Do you think you are ready to do such thing?</p>
+        <p>Press Play and find out...</p>
+        <p>You have 5 minutes</p>
+        <h2>Good Luck</h2>
+    </div>
 
-    <map name="workmap">
+
+
+
+
+    <div id="overlay" class="overlay">
+        <button id="startButton" class="start-button">Play</button>
+    </div>
+    
+    <div id="gameContainer">
+        <img src="/assets/Final_escaperoom.jpg" usemap="#workmap" alt="Escape Room" id="escapeRoomImage">
+    </div>
+
+    <map class="workmap" name="workmap">
         <area shape="poly" coords="719, 522, 910, 519, 919, 653, 722, 649" style="width: 100%;" id="pc1" alt="pc1">
         <area shape="poly" coords="1025, 520, 1204, 516, 1210, 637, 1031, 641" style="width: 100%;" id="pc2" alt="pc2">
         <area shape="poly" coords="1303, 517, 1435, 516, 1436, 625, 1303, 629" style="width: 100%;" id="pc3" alt="pc3">
-        <area shape="poly" coords="1197, 318, 1345, 320, 1346, 365, 1197, 366" style="width: 100%;" id="exit" alt="exit">
+        <area shape="poly" coords="1197, 318, 1345, 320, 1346, 365, 1197, 366" style="width: 100%;" id="exitSign" alt="exit">
     </map>
+
+    <div class="timer-container">
+        Time Left: <span id="timer"></span>
+    </div>
 
     <div class="popup" id="popup1">
         <div class="popup-content">
             <h2>HTML Question</h2>
             <p>What is the correct HTML tag used to create a hyperlink?</p>
             <ul class="answers">
-                <li><button class="answer"><a>A - `link`</a></button></li>
+                <li><button class="answer">A - `link`</button></li>
                 <li><button class="answer">B - `a`</button></li>
                 <li><button class="answer">C - `href`</button></li>
                 <li><button class="answer">D - `hyperlink`</button></li>
             </ul>
             <button class="close-btn" id="closePopup1">Close</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popup2">
+        <div class="popup-content">
+            <h2>CSS Question</h2>
+            <p>Which CSS property is used to change the text color of an element?</p>
+            <ul class="answers">
+                <li><button class="answer">A - `font-color`</button></li>
+                <li><button class="answer">B - `color`</button></li>
+                <li><button class="answer">C - `text-color`</button></li>
+                <li><button class="answer">D - `font-style`</button></li>
+            </ul>
+            <button class="close-btn" id="closePopup2">Close</button>
+        </div>
+    </div>
+
+    <div class="popup" id="congratsPopup1">
+        <div class="popup-content">
+            <h2>Congratulations!</h2>
+            <p id="congratsText1"></p>
+            <button class="close-btn" id="closeCongrats1">Close</button>
+        </div>
+    </div>
+
+    <div class="popup" id="congratsPopup2">
+        <div class="popup-content">
+            <h2>Congratulations!</h2>
+            <p id="congratsText2"></p>
+            <button class="close-btn" id="closeCongrats2">Close</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <h2>JavaScript Question</h2>
+            <p>What is the correct syntax to output "Hello World" in JavaScript?</p>
+            <ul class="answers">
+                <li class="answer">A. echo "Hello World";</li>
+                <li class="answer">B. print("Hello World");</li>
+                <li class="answer">C. document.write("Hello World");</li>
+                <li class="answer">D. response.write("Hello World");</li>
+            </ul>
+            <button id="closePopup3" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Congrats popup for third question -->
+    <div id="congratsPopup3" class="popup">
+        <div class="popup-content">
+            <h2>Congratulations!</h2>
+            <p id="congratsText3"></p>
+            <button id="closeCongrats3" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="lockerPopup" class="popup">
+        <div class="popup-content">
+            <h2>Enter the 3-digit code</h2>
+            <input type="text" id="codeInput" maxlength="3">
+            <button id="submitCode" class="close-btn">Submit</button>
+            <button id="closeLockerPopup" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="finalCongratsPopup" class="popup">
+        <div class="popup-content">
+            <h2>Congratulations!</h2>
+            <p>YOU GOT THE JOB</p>
+            <button id="closeFinalCongratsPopup" class="close-btn">Close</button>
+        </div>
+    </div>
+
+
+    <div id="timeoutPopup" class="popup">
+        <div class="popup-content">
+            <h2>Time's up!</h2>
+            <p>Study first before playing</p>
+            <button id="closeTimeoutPopup" class="close-btn">OK</button>
         </div>
     </div>
 

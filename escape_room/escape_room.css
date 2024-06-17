@@ -1,26 +1,23 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Kode Mono';
 }
 
-#logo{
-    width: 75%;
-}
-
-.navbar{
+/* Navbar styles */
+.navbar {
     background: #2b2929;
     height: 80px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     font-size: 1.2rem;
     top: 0;
     z-index: 999;
 }
 
-.navbar_container{
+.navbar_container {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -31,28 +28,27 @@
     padding: 0 50px;
 }
 
-
-#navbar_logo{
+#navbar_logo {
     width: 200px;
     padding: 20px 50px;
-    display:flex;
-    align-items: center;
-    cursor:pointer;
-}
-
-.navbar_menu{
     display: flex;
     align-items: center;
-    list-style:none;
+    cursor: pointer;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
     text-align: center;
 }
 
-.navbar_item{
+.navbar_item {
     height: 80px;
 }
 
-.navbar_links{
-    color:#fff;
+.navbar_links {
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +57,7 @@
     height: 100%;
 }
 
-.navbar_btn{
+.navbar_btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +65,7 @@
     width: 100%;
 }
 
-.button{
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,22 +77,21 @@
     outline: none;
     border-radius: 4px;
     background: #409fff;
-    color: #fff; 
+    color: #fff;
 }
 
-.button:hover{
+.button:hover {
     background: #a1cdf8;
     transition: all 0.3s ease;
 }
 
-.navbar_links:hover{
+.navbar_links:hover {
     color: #a1cdf8;
     transition: all 0.3s ease;
-
 }
 
 @media screen and (max-width: 960px) {
-    .navbar_container{
+    .navbar_container {
         display: flex;
         justify-content: space-between;
         height: 80px;
@@ -107,7 +102,7 @@
         margin-bottom: 80px;
     }
 
-    .navbar_menu{
+    .navbar_menu {
         display: grid;
         grid-template-columns: auto;
         margin: 0;
@@ -120,17 +115,17 @@
         z-index: -1;
     }
 
-    .navbar_menu.active{
+    .navbar_menu.active {
         background: #131313;
         top: 100%;
-        opacity:1;
+        opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
         height: 50vh;
         font-size: 1.6rem;
     }
-    
-    .navbar_toggle .bar{
+
+    .navbar_toggle .bar {
         width: 25px;
         height: 3px;
         margin: 5px auto;
@@ -138,52 +133,53 @@
         background: #fff;
     }
 
-    .navbar_item{
+    .navbar_item {
         width: 100%;
     }
-    .navbar_links{
+    .navbar_links {
         text-align: center;
         padding: 2rem;
         width: 100%;
         display: table;
     }
 
-    #mobile-menu{
+    #mobile-menu {
         position: absolute;
         top: 20%;
         right: 5%;
         transform: translate(5%, 20%);
     }
-.navbar_btn{
-    padding-bottom: 2rem;
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        margin: 0;
+    }
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 80%;
-    margin: 0;
-}
-.navbar_toggle .bar{
-    display: block;
-    cursor: pointer;
-}
-
-#mobile-menu.is-active .bar:nth-child(2){
-    opacity: 0;
-}
-
-#mobile-menu.is-active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-}
-
-#mobile-menu.is-active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-}
-}
-
+/* Popup styles */
 .popup {
     display: none;
     position: fixed;
@@ -232,6 +228,10 @@
     background-color: #8bc34a;
 }
 
+.answer.incorrect {
+    background-color: #f44336;
+}
+
 .answer:hover {
     background-color: #e0e0e0;
 }
@@ -249,12 +249,120 @@
     background-color: #b3b3b3;
 }
 
+.timer-container {
+    position: absolute;
+    top: 600px;
+    right: 20px;
+    background-color: rgba(0, 0, 255, 0.8);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
+.timer {
+    font-weight: bold;
+}
 
+.play-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/design\ desfocado.png'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+.play-screen-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 104.5%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    margin-top: 36.1rem;
+}
 
+.start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 60px;
+    font-size: 18px;
+    background-color: #409fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1001; /* Make sure it is on top of the image */
+    color: #fff;
+    border: none;
+}
 
+.start-button:hover {
+    background-color: #ff76f4;
+}
+
+#gameContainer {
+    margin-top: 50px; /* Adjust based on nav bar height */
+    position: relative;
+}
+
+#escapeRoomImage {
+    width: 100%;
+    margin-top: -50px;
+}
+
+.narrativa{
+    background: url('/assets/WEBdesign_idea.png');
+}
+
+.narrativa h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding: 60px;
+    background-image: linear-gradient(to bottom, #409fff 0%, #d13aff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.narrativa p{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.narrativa h2{
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    background-image: linear-gradient(to bottom, #409fff 0%, #d13aff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.workmap{
+    cursor: pointer;
+}
 
 
 
