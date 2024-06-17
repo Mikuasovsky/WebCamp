@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     menuLinks.classList.toggle('active');
   });
 
-  
   function populateUserProfile() {
     const loggedInUsername = localStorage.getItem('loggedInUsername');
     const loggedInEmail = localStorage.getItem('loggedInEmail');
@@ -19,21 +18,23 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loggedInUsername && loggedInEmail) {
       usernameElement.textContent = loggedInUsername;
       emailElement.textContent = loggedInEmail;
+
+      
+      const profileImage = localStorage.getItem(`profileImage_${loggedInEmail}`);
+      if (profileImage) {
+        profileImg.src = profileImage;
+      } else {
+        profileImg.src = '/assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg';
+      }
     } else {
       usernameElement.textContent = '';
       emailElement.textContent = '';
-    }
-
-    
-    const profileImage = localStorage.getItem('profileImage');
-    if (profileImage) {
-      profileImg.src = profileImage;
+      profileImg.src = '/assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; 
     }
   }
 
   populateUserProfile();
 
-  
   document.getElementById('btn-upload').addEventListener('click', function () {
     const fileInput = document.getElementById('image-upload');
     const file = fileInput.files[0];
@@ -45,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  
   function updateProfileImage(file) {
     const reader = new FileReader();
 
@@ -53,24 +53,23 @@ document.addEventListener('DOMContentLoaded', function () {
       const profileImg = document.getElementById('profile-image');
       profileImg.src = e.target.result;
 
-      
-      localStorage.setItem('profileImage', e.target.result);
+      const loggedInEmail = localStorage.getItem('loggedInEmail');
+      if (loggedInEmail) {
+        localStorage.setItem(`profileImage_${loggedInEmail}`, e.target.result);
+      }
     };
 
     reader.readAsDataURL(file);
   }
 
-  
   function logout() {
     localStorage.removeItem('loggedInUsername');
     localStorage.removeItem('loggedInEmail');
-    localStorage.removeItem('profileImage');
     window.location.href = '/login_page/login_page.html';
   }
 
-  
   document.getElementById('logout-link').addEventListener('click', function (event) {
-    event.preventDefault(); 
-    logout(); 
+    event.preventDefault();
+    logout();
   });
 });

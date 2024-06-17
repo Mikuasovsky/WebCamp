@@ -4,6 +4,7 @@ const esmad = document.querySelector('.esmad')
 const cds = document.querySelector('.cds')
 const dsm = document.querySelector('.dsm')
 const dpc = document.querySelector('.dpc')
+const btn = document.querySelector('.main_btn')
 
 
 menu.addEventListener('click', function () {
@@ -29,4 +30,6 @@ dpc.addEventListener('click', function () {
   window.location.href = 'https://medium.com/@hybear/o-que-é-ser-um-ux-developer-154d8311407e'
 })
 
-
+btn.addEventListener('click', function () {
+  window.location.href = 'https://www.youtube.com/watch?v=hOpRyUDhx1k&list=PLzQP-1i75vgBcFCXmArvRuTyHX1aFazBk&index=21'
+})

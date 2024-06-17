@@ -534,7 +534,6 @@ body, html{
     display: block;
     margin: 0 auto;
     background-color: #e029d7;
-    margin-top: px;
 }
 
 .primeiro img{
@@ -640,9 +639,210 @@ body, html{
     margin-top: 85px;
 }
 
+.sep5 p{
+    margin-top: 20px;
+}
 
+.sep5 img{
+    width: 35%;
+    margin-left: 12rem;
+}
 
+.sep5 .dm{
+    margin-left: 15rem;
+    margin-bottom: 20rem;
+    
+}
 
+.main_btn{
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #ff76f4 0%, #ad2ca7 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+    margin-top: 10rem;
+    cursor: pointer;
+    transition: all 0.35;
+    outline: none;
+    margin-right: 10rem;
+    margin-left: 55rem;
+    z-index: 1;
+}
+
+.main_btn a{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main_btn:after {
+    position: absolute;
+    content:' ';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #a1cdf8;
+    transition: all 0.35s;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.main_btn:hover{
+    color:#fff;
+}
+
+.main_btn:hover:after{
+    width: 100%;
+}
+
+@media screen and (max-width: 960px){
+    
+    .stats{
+        height: 2200px;
+    }
+
+    .sep p{
+        width: 50%;
+        position: relative;
+        right: 28rem;
+    }
+
+    .sep3 .ano1{
+        position: relative;
+        left: 9rem;
+    }
+
+    .ano1 h2{
+        margin-left: 15rem;
+    }
+
+    .ano1 h2::after{
+        content: "";
+        position: absolute;
+        width: 19%;
+        height: 4px;
+        display: block;
+        margin: 0 auto;
+        background-color: #e029d7;
+    }
+
+    .sep3 .ano2{
+        width: 50%;
+        position: relative;
+        right: 28rem;
+    }
+
+    .ano2 h2{
+        width: 100%;
+    }
+
+    .ano2 h2::after{
+        content: "";
+        position: absolute;
+        width: 35%;
+        height: 4px;
+        display: block;
+        margin: 0 auto;
+        background-color: #e029d7;
+    }
+
+    .sep3 .ano3{
+        width: 50%;
+        position: relative;
+        right: 66rem;
+    }
+
+    .ano3 h2{
+        width: 100%;
+        position: relative;
+        right: 10rem;
+    }
+
+    .ano3 h2::after{
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 4px;
+        display: block;
+        margin: 0 auto;
+        background-color: #e029d7;
+    }
+
+    #pe{
+        width: 100%;
+        position: relative;
+        right: 9rem;
+    }
+
+    #pe::after{
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 4px;
+        display: block;
+        margin: 10 auto;
+        background-color: #e029d7;
+    }
+
+    #sp{
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+    #sp::after{
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 4px;
+        display: block;
+        margin-top: 180px;
+        background-color: #e029d7;
+    }
+
+    .sep4 h2{
+        width: 50%;
+        position: relative;
+        right: 28rem;
+    }
+
+    #po::after{
+        content: "";
+        position: absolute;
+        width: 45%;
+        height: 4px;
+        display: block;
+        background-color: #e029d7;
+    }
+
+    .sep5 h2{
+        width: 50%;
+        position: relative;
+        right: 28rem;
+    }
+
+    .sep5 img{
+        position: relative;
+        right: 7rem;
+    }
+
+    .sep5 iframe{
+        width: 30%;
+        position:absolute;
+        right: 7rem;
+        margin-top: 5rem;
+    }
+    
+    .main_btn{
+        position: relative;
+        right: 25rem;
+        margin-bottom: 10rem;
+    }
+}
 
 
 .footer_container{
