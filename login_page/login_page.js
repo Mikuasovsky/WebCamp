@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const txtpass = document.querySelector('.txt-pass');
   const submit = document.querySelector('.btn-sub');
   const submit1 = document.querySelector('.btn-sub1');
-  const rememberMe = document.querySelector('#remember-me'); // Select the "Remember Me" checkbox
+  const rememberMe = document.querySelector('#remember-me'); 
 
   menu.addEventListener('click', () => {
     menu.classList.toggle('is-active');
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem("adminAdded", "true");
   }
 
-  // Check if user credentials are stored in localStorage
+  
   if (localStorage.getItem("rememberedEmail") && localStorage.getItem("rememberedPass")) {
     txtemail.value = localStorage.getItem("rememberedEmail");
     txtpass.value = localStorage.getItem("rememberedPass");
-    rememberMe.checked = true; // Check the "Remember Me" checkbox if credentials are stored
+    rememberMe.checked = true; 
   }
 
   submit.addEventListener('click', (event) => {
