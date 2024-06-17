@@ -333,9 +333,10 @@
 }
 
 .about-content p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     color: #131313;
+    font-weight: bold;
 }
 
 .about-content h2::after{
@@ -350,6 +351,12 @@
 .about-content2{
     flex: 1;
 }
+
+.about-content2 ul{
+    font-size: 20px;
+    font-weight: bold
+}
+
 
 .about-content2 h2{
     font-size: 23px;
