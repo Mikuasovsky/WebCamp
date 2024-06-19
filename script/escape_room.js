@@ -27,10 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const correctAnswerIndex1 = 1; 
     const correctAnswerIndex2 = 1; 
     const correctAnswerIndex3 = 2; 
-    const menu = document.querySelector('#mobile-menu')
-    const menuLinks = document.querySelector('.navbar_menu')
-
-    
     const overlay = document.getElementById('overlay');
     const startButton = document.getElementById('startButton');
 
@@ -38,10 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let secondQuestionAnsweredCorrectly = false; 
     let thirdQuestionAnsweredCorrectly = false; 
     let randomNumber1, randomNumber2, randomNumber3; 
-    menu.addEventListener('click', function () {
-        menu.classList.toggle('is-active')
-        menuLinks.classList.toggle('active')
-      });
+    
     
    
     const timerElement = document.getElementById('timer');
@@ -71,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     closeTimeoutPopup.addEventListener('click', function() {
         timeoutPopup.style.display = 'none';
-        window.location.href = '/learn_page/learn_page.html';
+        window.location.href = '/learn_page.html';
     });
 
     

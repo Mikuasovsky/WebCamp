@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (email === adminEmail && pass === adminPass) {
       alert("Admin Login Successful");
-      window.location.href = "../account_page/account_page.html";
+      window.location.href = "/account_page.html";
       return;
     }
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem("loggedInUsername", user.username);
       localStorage.setItem("loggedInEmail", user.email);
       alert("Login Successful");
-      window.location.href = "../account_page/account_page.html";
+      window.location.href = "/account_page.html";
     } else {
       alert("Invalid Email or Password");
     }

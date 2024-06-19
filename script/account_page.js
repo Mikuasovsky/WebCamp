@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function logout() {
     localStorage.removeItem('loggedInUsername');
     localStorage.removeItem('loggedInEmail');
-    window.location.href = '/login_page/login_page.html';
+    window.location.href = '/login_page.html';
   }
 
   document.getElementById('logout-link').addEventListener('click', function (event) {
