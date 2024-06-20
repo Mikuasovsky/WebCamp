@@ -7,7 +7,7 @@ menu.addEventListener("click", function () {
 });
 
 function checkUser() {
-  if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'admin@web.camp'){
+  if (!localStorage.getItem('loggedInEmail') === 'admin@web.camp'){
     window.location.href = 'login_page.html';
   }
   console.log('User is logged in as Admin');

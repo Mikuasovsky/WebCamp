@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if(localStorage.getItem("loggedInUsername") && localStorage.getItem("loggedInEmail")){
+    if(localStorage.getItem("loggedInEmail") === "admin@web.camp")
+      window.location.href = "/admin.html";
+    window.location.href = "/account_page.html";
+  }
   const menu = document.querySelector('#mobile-menu');
   const menuLinks = document.querySelector('.navbar_menu');
   const txtemail = document.querySelector('.txt-email');
@@ -6,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const submit = document.querySelector('.btn-sub');
   const submit1 = document.querySelector('.btn-sub1');
   const rememberMe = document.querySelector('#remember-me'); 
+
 
   menu.addEventListener('click', () => {
     menu.classList.toggle('is-active');
@@ -55,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (email === adminEmail && pass === adminPass) {
+      localStorage.setItem("loggedInEmail", "admin@web.camp");
       window.location.href = "/admin.html";
       return;
     }
@@ -62,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let user_records = JSON.parse(localStorage.getItem("users")) || [];
     let user = user_records.find((user) => user.email === email && user.password === pass);
 
-    console.log(user);
     if (user) {
       if(user.status === "Blocked"){
         alert("Your account has been blocked!");
@@ -114,9 +120,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   submit1.addEventListener('click', saveData);
 });
-
-
-function getUser(username) {
-  let users = JSON.parse(localStorage.getItem("users"));
-  return users.find((user) => user.username === username);
-}

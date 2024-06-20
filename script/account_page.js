@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const menu = document.querySelector('#mobile-menu');
-  const menuLinks = document.querySelector('.navbar_menu');
+  const menuLinks = document.querySelector('.navbar_menu');  
+  const submit = document.querySelector('.btn-save');
 
   function checkLogIn() {
     if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'null'){
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const loggedInUsername = localStorage.getItem('loggedInUsername');
     const loggedInEmail = localStorage.getItem('loggedInEmail');
-    updateStatus(loggedInUsername);
+    updateStatus(loggedInUsername,'Logged In');
     
     const usernameElement = document.getElementById('profile-username');
     const emailElement = document.getElementById('profile-email');
@@ -79,10 +80,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  function updateStatus(username){
+  function updateStatus(username,status){
     let users = JSON.parse(localStorage.getItem("users"));
     let user = users.find((user) => user.username === username);
-    user.status = "Logged In";
+    user.status = status;
     localStorage.setItem("users", JSON.stringify(users));
   }
 
@@ -102,13 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
     reader.readAsDataURL(file);
   }
 
-  function updateStatus(username){
-    let users = JSON.parse(localStorage.getItem("users"));
-    let user = users.find((user) => user.username === username);
-    user.status = "Logged out";
-    localStorage.setItem("users", JSON.stringify(users));
-  }
-
   function getUser(username) {
     let users = JSON.parse(localStorage.getItem("users"));
     let user = users.find((user) => user.username === username);
@@ -116,8 +110,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
+  function updateProfile(event){
+    event.preventDefault();
+
+    let users = JSON.parse(localStorage.getItem("users"));
+    let user = users.find((user) => user.username === localStorage.getItem('loggedInUsername'));
+    let username = document.getElementById('username').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let password = document.getElementById('password').value.trim();
+    let address = document.getElementById('address').value.trim();
+
+    if(username){
+      user.username = username;
+    }
+    if(email){
+      user.email = email;
+    }
+    if(password){
+      user.password = password;
+    }
+    if(address){
+      user.address = address;
+    }
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Profile Updated Successfully, please sign in again!");
+    window.location.href = '/login_page.html';
+  
+  }
+
   function logout() {
-    updateStatus(localStorage.getItem('loggedInUsername'));      
+    updateStatus(localStorage.getItem('loggedInUsername'),'Logged Out');      
     localStorage.removeItem('loggedInUsername');
     localStorage.removeItem('loggedInEmail');
     window.location.href = '/login_page.html';
@@ -127,4 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     logout();
   });
+
+  submit.addEventListener('click', updateProfile);
+
 });
