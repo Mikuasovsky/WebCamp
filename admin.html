@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile | WebCamp</title>
-    <link rel="stylesheet" href="/styles/account_page.css">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/styles/admin.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/logo_png.png" type="image" id="logo">
-    <script src="https://kit.fontawesome.com/dada07158c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMWj44oi9sI5ALpBi4Su/0mpzn0w0r7rc7Ftw3Q" crossorigin="anonymous">
 </head>
 <body>
@@ -30,7 +29,7 @@
                     <a href="/learn_page.html" class="navbar_links"> Learn </a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/escape_room.html" class="navbar_links"> Escape Room </a>
+                    <a src="/escape_room.html" class="navbar_links"> Escape Room </a>
                 </li>
                 <li class="navbar_item">
                     <a href="/aboutUs_page.html" class="navbar_links"> About Us </a>
@@ -40,60 +39,21 @@
                 </li>
             </ul>
         </div>
+        
     </nav>
 
-    <div class="profile-container">
-        <div class="profile">
-            <div class="profile-header">
-                <img src="/assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="profile" class="profile-img" id="profile-image" />
-                <div class="profile-text-container">
-                  <h1 class="profile-title" id="profile-username"></h1>
-                  <p class="profile-email" id="profile-email"></p>
-                  <input type="file" id="image-upload" >
-                  <button id="btn-upload">Upload Image</button>
-                </div>
-              </div>
-            <div class="menu">
-                <a href="#" class="menu-link"><i class="fa-solid fa-user" id="menu-icon"></i>Account</a>
-                <a href="#" class="menu-link"><i class="fa-solid fa-bell" id="menu-icon"></i>Notification</a>
-                <a href="#" class="menu-link"><i class="fa-solid fa-gear" id="menu-icon"></i>Settings</a>
-                <a href="#" id="logout-link" class="menu-link"><i class="fa-solid fa-right-from-bracket" id="menu-icon"></i>Logout</a>
+    <div class="main">
+        <div class="main_container">
+            <div class="main_title">
+                <h1>Admin Page</h1>
+            </div>
+            <div id="main_content" class="main_content">
+
             </div>
         </div>
-        <form class="account">
-            <div class="account-header">
-                <h1 class="account-title">Account Settings</h1>
-                <div class="btn-container">
-                    <button class="btn-cancel">Cancel</button>
-                    <button class="btn-save">Save</button>
-                </div>
-            </div>
-            <div class="account-edit">
-                <div class="input-container">
-                    <label>Username</label>
-                    <input type="text" placeholder="Username">
-                </div>
-            </div>
-
-            <div class="account-edit">
-                <div class="input-container">
-                    <label>Email</label>
-                    <input type="email" placeholder="Email">
-                </div>
-                <div class="input-container">
-                    <label>Password</label>
-                    <input type="text" placeholder="Password">
-                </div>
-            </div>
-
-            <div class="account-edit">
-                <div class="input-container">
-                    <label>Address</label>
-                    <textarea placeholder="Address"></textarea>
-                </div>
-            </div>
-        </form>
     </div>
+
+
 
     <div class="footer_container">
         <div class="footerlinks">
@@ -124,10 +84,10 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
-    <script src="/script/account_page.js"></script>
+    <script src="/script/admin.js"></script>
 </body>
 </html>

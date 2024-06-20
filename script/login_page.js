@@ -55,8 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (email === adminEmail && pass === adminPass) {
-      alert("Admin Login Successful");
-      window.location.href = "/account_page.html";
+      window.location.href = "/admin.html";
       return;
     }
 
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (user) {
       localStorage.setItem("loggedInUsername", user.username);
       localStorage.setItem("loggedInEmail", user.email);
-      alert("Login Successful");
+      user.loggedIn = true;
       window.location.href = "/account_page.html";
     } else {
       alert("Invalid Email or Password");
@@ -98,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
       user_records.push({
         "username": username,
         "email": email,
-        "password": password
+        "password": password,
+        "loggedIn": false
       });
       localStorage.setItem("users", JSON.stringify(user_records));
       alert("Registration Successful");
@@ -108,3 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   submit1.addEventListener('click', saveData);
 });
+
+
+function getUser(username) {
+  let users = JSON.parse(localStorage.getItem("users"));
+  return users.find((user) => user.username === username);
+}
