@@ -7,10 +7,10 @@ menu.addEventListener("click", function () {
 });
 
 function checkUser() {
-  // if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'admin@web.camp'){
-  //   window.location.href = 'login_page.html';
-  // }
-  // console.log('User is logged in');
+  if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'admin@web.camp'){
+    window.location.href = 'login_page.html';
+  }
+  console.log('User is logged in as Admin');
 }
 
 function tableCreate() {
@@ -33,21 +33,7 @@ function tableCreate() {
 
   tbl.appendChild(thead);
 
-  const users = getAllUserInfo();
-
-  if (users === null || users.length === 0) {
-
-    let user_records = JSON.parse(localStorage.getItem("users")) || [];
-    user_records.push({
-      "username": "rui",
-      "email": "rui@rui.rui",
-      "password": "rui",
-      "status": "Logged In"
-    });
-    localStorage.setItem("users", JSON.stringify(user_records));
-  }
-
-  console.log(users);
+  users = getAllUserInfo();
 
   if (users === null || users.length === 0) {
     const tr = tbl.insertRow();

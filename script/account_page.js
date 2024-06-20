@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuLinks = document.querySelector('.navbar_menu');
 
   function checkLogIn() {
-    // if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'null'){
-    //   window.location.href = 'login_page.html';
-    // }
-    // console.log('User is logged in');
+    if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'null'){
+      window.location.href = 'login_page.html';
+    }
+    console.log('User is logged in');
   }
+
+  checkLogIn();
 
   menu.addEventListener('click', function () {
     menu.classList.toggle('is-active');
@@ -19,8 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
     return users;
   }
 
-  console.log(getAllUserInfo());
+
   function populateUserProfile() {
+    user = getUser(localStorage.getItem('loggedInUsername'));  
+    console.log(user);
+
     const loggedInUsername = localStorage.getItem('loggedInUsername');
     const loggedInEmail = localStorage.getItem('loggedInEmail');
     updateStatus(loggedInUsername);
@@ -45,6 +50,20 @@ document.addEventListener('DOMContentLoaded', function () {
       emailElement.textContent = '';
       profileImg.src = '/assets/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; 
     }
+    document.getElementById('username').placeholder = user.username;
+    document.getElementById('email').placeholder = user.email;
+
+    document.getElementById('password').placeholder = buildStringPassword(user.password);
+    document.getElementById('address').placeholder = user.address;
+
+  }
+
+  function buildStringPassword(password){
+    let passwordString = "";
+    for(let i = 0; i < password.length; i++){
+      passwordString += "*";
+    }
+    return passwordString;
   }
 
   populateUserProfile();
@@ -88,6 +107,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let user = users.find((user) => user.username === username);
     user.status = "Logged out";
     localStorage.setItem("users", JSON.stringify(users));
+  }
+
+  function getUser(username) {
+    let users = JSON.parse(localStorage.getItem("users"));
+    let user = users.find((user) => user.username === username);
+    return user;
   }
 
 
