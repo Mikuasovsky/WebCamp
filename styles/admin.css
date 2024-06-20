@@ -181,7 +181,7 @@
 
 .main{
     background: url('/assets/design\ desfocado.png');
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-bottom: 9.5rem;
     height: 41.72rem;
 }
@@ -223,6 +223,17 @@ td{
 }
 
 .btn_delete{
+    background-color: #409fff;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-logout{
+    margin-left: 2rem;
     background-color: #409fff;
     color: #fff;
     border: none;

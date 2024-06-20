@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  if(localStorage.getItem("loggedInUsername") && localStorage.getItem("loggedInEmail")){
+  
+  if(localStorage.getItem("loggedInEmail")){
     if(localStorage.getItem("loggedInEmail") === "admin@web.camp")
-      window.location.href = "/admin.html";
-    window.location.href = "/account_page.html";
+      {
+        window.location.href = "/admin.html";
+      }
+    else{
+      window.location.href = "/account_page.html";
+    }
   }
   const menu = document.querySelector('#mobile-menu');
   const menuLinks = document.querySelector('.navbar_menu');

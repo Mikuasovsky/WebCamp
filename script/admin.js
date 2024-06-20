@@ -1,5 +1,6 @@
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar_menu");
+const btnLogout = document.querySelector('#logout');
 
 menu.addEventListener("click", function () {
   menu.classList.toggle("is-active");
@@ -7,7 +8,7 @@ menu.addEventListener("click", function () {
 });
 
 function checkUser() {
-  if (!localStorage.getItem('loggedInEmail') === 'admin@web.camp'){
+  if (localStorage.getItem('loggedInEmail') !== 'admin@web.camp' || !localStorage.getItem('loggedInEmail')){
     window.location.href = 'login_page.html';
   }
   console.log('User is logged in as Admin');
@@ -117,5 +118,13 @@ function getAllUserInfo() {
   return users;
 }
 
+function logout() {    
+  localStorage.removeItem('loggedInUsername');
+  localStorage.removeItem('loggedInEmail');
+  window.location.href = '/login_page.html';
+}
+
 tableCreate();
 checkUser();
+
+btnLogout.addEventListener('click', logout);
