@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const submit = document.querySelector('.btn-save');
 
   function checkLogIn() {
-    if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'null'){
+    if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === null){
       window.location.href = 'login_page.html';
     }
     console.log('User is logged in');
@@ -16,12 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
   });
-
-  function getAllUserInfo() {
-    const users = JSON.parse(localStorage.getItem("users"));
-    return users;
-  }
-
 
   function populateUserProfile() {
     user = getUser(localStorage.getItem('loggedInUsername'));  
@@ -139,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function logout() {
-    updateStatus(localStorage.getItem('loggedInUsername'),'Logged Out');      
+    updateStatus(localStorage.getItem('loggedInEmail'),'Logged Out');      
     localStorage.removeItem('loggedInUsername');
     localStorage.removeItem('loggedInEmail');
     window.location.href = '/login_page.html';
