@@ -2,15 +2,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const menu = document.querySelector('#mobile-menu');
   const menuLinks = document.querySelector('.navbar_menu');
 
+  function checkLogIn() {
+    // if (localStorage.getItem('loggedInUsername') === null || !localStorage.getItem('loggedInEmail') === 'null'){
+    //   window.location.href = 'login_page.html';
+    // }
+    // console.log('User is logged in');
+  }
+
   menu.addEventListener('click', function () {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
   });
 
+  function getAllUserInfo() {
+    const users = JSON.parse(localStorage.getItem("users"));
+    return users;
+  }
+
+  console.log(getAllUserInfo());
   function populateUserProfile() {
     const loggedInUsername = localStorage.getItem('loggedInUsername');
     const loggedInEmail = localStorage.getItem('loggedInEmail');
-
+    updateStatus(loggedInUsername);
+    
     const usernameElement = document.getElementById('profile-username');
     const emailElement = document.getElementById('profile-email');
     const profileImg = document.getElementById('profile-image');
@@ -46,6 +60,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  function updateStatus(username){
+    let users = JSON.parse(localStorage.getItem("users"));
+    let user = users.find((user) => user.username === username);
+    user.status = "Logged In";
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+
   function updateProfileImage(file) {
     const reader = new FileReader();
 
@@ -62,7 +83,16 @@ document.addEventListener('DOMContentLoaded', function () {
     reader.readAsDataURL(file);
   }
 
+  function updateStatus(username){
+    let users = JSON.parse(localStorage.getItem("users"));
+    let user = users.find((user) => user.username === username);
+    user.status = "Logged out";
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+
+
   function logout() {
+    updateStatus(localStorage.getItem('loggedInUsername'));      
     localStorage.removeItem('loggedInUsername');
     localStorage.removeItem('loggedInEmail');
     window.location.href = '/login_page.html';

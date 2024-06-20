@@ -27,13 +27,27 @@ function tableCreate() {
   th = thRow.insertCell();
   th.appendChild(document.createTextNode("Email"));
   th = thRow.insertCell();
-  th.appendChild(document.createTextNode("Logged in"));
+  th.appendChild(document.createTextNode("Status"));
   th = thRow.insertCell();
   th.appendChild(document.createTextNode("Actions"));
 
   tbl.appendChild(thead);
 
   const users = getAllUserInfo();
+
+  if (users === null || users.length === 0) {
+
+    let user_records = JSON.parse(localStorage.getItem("users")) || [];
+    user_records.push({
+      "username": "rui",
+      "email": "rui@rui.rui",
+      "password": "rui",
+      "status": "Logged In"
+    });
+    localStorage.setItem("users", JSON.stringify(user_records));
+  }
+
+  console.log(users);
 
   if (users === null || users.length === 0) {
     const tr = tbl.insertRow();
@@ -49,6 +63,8 @@ function tableCreate() {
     return;
   }
 
+
+
   users.forEach((user) => {
     const tr = tbl.insertRow();
     tr.className = "table_row";
@@ -57,11 +73,7 @@ function tableCreate() {
     td = tr.insertCell();
     td.appendChild(document.createTextNode(user.email));
     td = tr.insertCell();
-    if (user.loggedIn){
-      td.appendChild(document.createTextNode("Yes"));
-    } else{
-      td.appendChild(document.createTextNode("No"));
-    }
+    td.appendChild(document.createTextNode(user.status));
     td = tr.insertCell();
     const btn = document.createElement("button");
     btn.className = "btn_delete";
@@ -69,10 +81,42 @@ function tableCreate() {
     btn.onclick = function () {
       deleteUser(user.username);
     };
+    const btn2 = document.createElement("button");
+    btn2.className = "btn_block";
+    if(user.status === "Blocked"){
+      btn2.innerHTML = "Unblock";
+      btn2.onclick = function () {
+        unBlockUser(user.username);
+      };
+    }else{
+      btn2.innerHTML = "Block";
+      btn2.onclick = function () {
+        blockUser(user.username);
+      };
+    }
+
     td.appendChild(btn);
+    btn2.style.marginLeft = "10px";
+    td.appendChild(btn2);
   });
 
   body.appendChild(tbl);
+}
+
+function unBlockUser(username) {
+  const users = JSON.parse(localStorage.getItem("users"));
+  const user = users.find((user) => user.username === username);
+  user.status = "Logged Out";
+  localStorage.setItem("users", JSON.stringify(users));
+  window.location.reload();
+}
+
+function blockUser(username) {
+  const users = JSON.parse(localStorage.getItem("users"));
+  const user = users.find((user) => user.username === username);
+  user.status = "Blocked";
+  localStorage.setItem("users", JSON.stringify(users));
+  window.location.reload();
 }
 
 function deleteUser(username) {

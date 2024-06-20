@@ -62,15 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let user_records = JSON.parse(localStorage.getItem("users")) || [];
     let user = user_records.find((user) => user.email === email && user.password === pass);
 
-    if (user) {
+    console.log(user);
+    if (user && user.status !== "Blocked") {
       localStorage.setItem("loggedInUsername", user.username);
       localStorage.setItem("loggedInEmail", user.email);
-      user.loggedIn = true;
       window.location.href = "/account_page.html";
-    } else {
-      alert("Invalid Email or Password");
+    } else if(user.status === "Blocked") {
+      alert("Your account has been blocked!");
+    }else{
+      alert("Invalid Email or Password!");
     }
   });
+
 
   function saveData(event) {
     event.preventDefault();
@@ -98,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "username": username,
         "email": email,
         "password": password,
-        "loggedIn": false
+        "status": "Logged Out"
       });
       localStorage.setItem("users", JSON.stringify(user_records));
       alert("Registration Successful");
